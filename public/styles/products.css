@@ -1,0 +1,80 @@
+#products-grid {
+  margin: var(--space-8) auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));  /*create as many cols as possible with min width 15m and max having fraction width of viewport*/
+  gap: var(--space-4); /*gap between cols and rows in grid*/
+}
+
+.product-item {
+  border-radius: var(--border-radius-medium);
+  text-align: center; /*inline elements like image will also get centered*/
+  background-color: var(--color-gray-600);
+  overflow: hidden; /*the image overflows from container and we cannot the border-radius prop, thats why*/
+}
+
+.product-item img {
+  width: 100%;  /*takes entire width of the width assigned to individual li items by grid*/
+  height: 10rem;
+  object-fit: cover; /*so no image distortion*/
+}
+
+.product-item-content {
+  padding: var(--space-4);
+}
+
+.product-item-content h2 {
+  font-size: 1.15rem;
+  margin: var(--space-2) 0;
+}
+
+.product-item-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  justify-content: center; /* for customers all product page */
+}
+
+/* product-details.ejs in customer down below */
+
+#product-details header {
+  margin-top: var(--space-8);
+  padding: var(--space-8);
+  background-color: var(--color-gray-600);
+  gap: var(--space-8);
+}
+
+#product-details img {
+  width: 100%;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: var(--border-radius-medium);
+  border: 1px solid var(--color-gray-100);
+}
+
+#product-info {
+  text-align: center;
+}
+
+#product-description {
+  background-color: var(--color-primary-500-bg);
+  padding: var(--space-8);
+  white-space: pre-wrap; /*so that in description intended line breaks or spaces are not skipped as they are by default*/
+}
+
+/* bigger screens */
+@media (min-width: 48rem) {
+  #product-details header {
+    display: flex;
+  }
+
+  #product-details img {
+    width: 20rem;
+    height: 15rem;
+    transform: rotateZ(-10deg);
+    margin: var(--space-8);
+  }
+
+  #product-info {
+    text-align: left;
+  }
+}

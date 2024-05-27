@@ -1,0 +1,139 @@
+main {
+  margin-top: 6rem; /*this ensures the main page is shift by 5rem(height of header) + 1extra rem from top so that the entire content of main page is visible*/
+}
+
+#main-header {
+  position: fixed; /*this hides the login logo as header is taken out of flow and main page shifts up*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 60rem;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-primary-500);
+  background-color: var(--color-gray-500);
+}
+
+#logo a {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#main-header nav {
+  display: none;
+}
+
+.nav-items {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-items li {
+  margin: 0 var(--space-2);
+}
+
+.nav-items button {
+  cursor: pointer;
+  font: inherit;
+  border: 1px solid var(--color-primary-100);
+  border-radius: var(--border-radius-small);
+  background-color: transparent;
+  padding: var(--space-2) var(--space-4);
+}
+
+#mobile-menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: none;
+  cursor: pointer;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: transparent;
+  padding: 0;
+}
+
+#mobile-menu-btn span {
+  width: 2.25rem;
+  height: 0.2rem;
+  background-color: var(--color-gray-100);
+}
+
+#mobile-menu {
+  /*aside element in header */
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  height: calc(100vh - 5rem); /*takes the full viewport after 5rem from top*/
+  width: 100%;
+  background-color: var(--color-gray-700);
+  display: none; /* by default keep it hidden , will add javascript logic to show it when hamburger btn is clicked */
+  flex-direction: column;
+  align-items: center;
+}
+
+#mobile-menu.open {
+  /* no space means compound selector, selecting the mobile-menu id element that  also has open class in it , toggling */
+  display: flex;
+}
+
+#mobile-menu nav {
+  height: 20rem;
+  width: 90%;
+  margin: var(--space-4) auto;
+}
+
+#mobile-menu .nav-items a,
+#mobile-menu .nav-items button {
+  font-size: 1.75rem;
+  color: var(--color-primary-100);
+}
+
+/* mobile first approach, hence this is applied for screen sizes with and greater than 48rem */
+@media (min-width: 48rem) {
+  main {
+    margin-top: 0;
+  }
+
+  #main-header {
+    position: static; /*we dont have any problem in bigger screens so not fixing the position property*/
+  }
+
+  #main-header nav {
+    display: block;
+  }
+
+  .nav-items button {
+    color: var(--color-primary-500);
+    border-color: var(--color-primary-500);
+  }
+
+  #mobile-menu-btn {
+    display: none; /*dont want the hamburger menu btn in larger screens anyway*/
+  }
+
+  #mobile-menu {
+    display: none; /*dont want the side menu in larger screens anyway*/
+  }
+
+  .nav-items {
+    flex-direction: row;
+  }
+
+  .nav-items a {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--border-radius-small);
+  }
+
+  .nav-items a:hover,
+  .nav-items a:active {
+    background-color: var(--color-primary-500-bg);
+  }
+}
