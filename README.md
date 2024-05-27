@@ -38,7 +38,7 @@ This project is an online furniture store showcasing a variety of furniture item
 ### Installation
 
 1. **Clone the repository**:
-    git clone https://github.com/yourusername/online-furniture-shop.git
+    git clone https://github.com/shirish001/online-furniture-shop.git
     cd online-furniture-shop
 
 2. **Install dependencies**:
@@ -65,7 +65,10 @@ Product-details page
 ![product-page](https://github.com/shirish001/online-furniture-shop/assets/96719015/53c9842c-433f-46bd-a7aa-af8de31bdf4b)
 
 Admin-Section, updating items, cart status...
-![admin-prod-update](https://github.com/shirish001/online-furniture-shop/assets/96719015/799f7313-d1ae-4608-9049-45b49344531c)![admin-orders-page](https://github.com/shirish001/online-furniture-shop/assets/96719015/07832747-7513-4f6d-86fe-dc9fee678b95)
+![admin-prod-update](https://github.com/shirish001/online-furniture-shop/assets/96719015/799f7313-d1ae-4608-9049-45b49344531c)
+
+![admin-orders-page](https://github.com/shirish001/online-furniture-shop/assets/96719015/07832747-7513-4f6d-86fe-dc9fee678b95)
+
 
 Stripe Interface for cart payment
 ![stripe payments page](https://github.com/shirish001/online-furniture-shop/assets/96719015/fc275cfd-d2e1-4a40-b031-d2c4deb1cdc5)
