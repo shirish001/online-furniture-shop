@@ -24,6 +24,9 @@ This project is an online furniture store showcasing a variety of furniture item
   - **MongoDB**: NoSQL database for storing user data, product details, and orders. (Local instance only)
   - **Mongoose**: ODM (Object Data Modeling) library for MongoDB to facilitate data manipulation.
 
+- **Authentication**:
+  - **JWT (JSON Web Tokens)**: Securely manage user sessions and authentication.
+    
 - **Payment Gateway**:
   - **Stripe API**: Integration for handling online payments (in test mode).
 
