@@ -42,15 +42,16 @@ This project is an online furniture store showcasing a variety of furniture item
 
 1. **Clone the repository**:
     git clone https://github.com/shirish001/online-furniture-shop.git
+   
     cd online-furniture-shop
 
-2. **Install dependencies**:
+3. **Install dependencies**:
     npm install
 
-3. **Run the application**:
+4. **Run the application**:
     npm start
 
-4. **Open your browser**:
+5. **Open your browser**:
     Navigate to `http://localhost:3000` to view the application.
 
 Pictures !
